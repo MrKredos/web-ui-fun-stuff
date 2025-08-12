@@ -1,40 +1,43 @@
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <title>Steam Library Posters</title>
-    </head>
-    <body>
-        <div class="button-container">
-            <button id="shine-toggle" onClick="toggleShine()">Toggle Shine</button>
-            <button id="drop-shadow-toggle" onClick="toggleDropShadow()">Toggle Drop Shadow</button>
-            <button id="blur-shadow-toggle" onClick="toggleBackgroundBlur()">Toggle Background Blur</button>
-            <button id="hover-toggle" onClick="toggleHover()">Toggle Hover</button>
-        </div>
 
-        <div class="three-row">
-            <div class="container">
-                <div class="image">
-                    <div class="shine"></div>
-                    <img src="https://image.tmdb.org/t/p/original/aoV4UeZGy8nM6F59l7KRXPrsK4B.jpg" class="normal" />
-                    <img src="https://image.tmdb.org/t/p/original/aoV4UeZGy8nM6F59l7KRXPrsK4B.jpg" class="blur" />
-                </div>
-            </div>
-            <div class="container">
-                <div class="image">
-                    <div class="shine"></div>
-                    <img src="https://image.tmdb.org/t/p/original/uDO8zWDhfWwoFdKS4fzkUJt0Rf0.jpg" class="normal" />
-                    <img src="https://image.tmdb.org/t/p/original/uDO8zWDhfWwoFdKS4fzkUJt0Rf0.jpg" class="blur" />
-                </div>
-            </div>
-            <div class="container">
-                <div class="image">
-                    <div class="shine"></div>
-                    <img src="https://image.tmdb.org/t/p/original/u68AjlvlutfEIcpmbYpKcdi09ut.jpg" class="normal" />
-                    <img src="https://image.tmdb.org/t/p/original/u68AjlvlutfEIcpmbYpKcdi09ut.jpg" class="blur" />
-                </div>
+<head>
+    <meta charset="UTF-8" />
+    <title>Steam Library Posters</title>
+</head>
+
+<body>
+    <div class="button-container">
+        <button id="shine-toggle" onClick="toggleShine()">Toggle Shine</button>
+        <button id="drop-shadow-toggle" onClick="toggleDropShadow()">Toggle Drop Shadow</button>
+        <button id="blur-shadow-toggle" onClick="toggleBackgroundBlur()">Toggle Background Blur</button>
+        <button id="hover-toggle" onClick="toggleHover()">Toggle Hover</button>
+    </div>
+
+    <div class="three-row">
+        <div class="container">
+            <div class="image">
+                <div class="shine"></div>
+                <img src="https://image.tmdb.org/t/p/original/aoV4UeZGy8nM6F59l7KRXPrsK4B.jpg" class="normal" />
+                <img src="https://image.tmdb.org/t/p/original/aoV4UeZGy8nM6F59l7KRXPrsK4B.jpg" class="blur" />
             </div>
         </div>
-    </body>
+        <div class="container">
+            <div class="image">
+                <div class="shine"></div>
+                <img src="https://image.tmdb.org/t/p/original/uDO8zWDhfWwoFdKS4fzkUJt0Rf0.jpg" class="normal" />
+                <img src="https://image.tmdb.org/t/p/original/uDO8zWDhfWwoFdKS4fzkUJt0Rf0.jpg" class="blur" />
+            </div>
+        </div>
+        <div class="container">
+            <div class="image">
+                <div class="shine"></div>
+                <img src="https://image.tmdb.org/t/p/original/u68AjlvlutfEIcpmbYpKcdi09ut.jpg" class="normal" />
+                <img src="https://image.tmdb.org/t/p/original/u68AjlvlutfEIcpmbYpKcdi09ut.jpg" class="blur" />
+            </div>
+        </div>
+    </div>
+</body>
+
 </html>
 
 <style>
@@ -78,7 +81,13 @@
         gap: 24px;
         align-items: flex-start;
         justify-content: center;
+        max-width: 1000px;
+        margin-right: auto;
+        margin-left: auto;
+        padding-right: 30px;
+        padding-left: 30px;
     }
+
     .container {
         display: flex;
         flex: 1 1 20%;
@@ -111,6 +120,7 @@
         margin: auto;
         object-fit: contain;
     }
+
     .normal {
         max-width: 250px;
         width: 100%;
@@ -156,13 +166,11 @@
         --opacity2: 0;
         --opacity3: 0.05;
 
-        background: linear-gradient(
-            30deg,
-            rgba(255, 255, 255, var(--opacity1)) 0%,
-            rgba(255, 255, 255, var(--opacity2)) var(--stop1),
-            rgba(255, 255, 255, var(--opacity3)) var(--stop2),
-            rgba(255, 255, 255, 0.01) 100%
-        );
+        background: linear-gradient(30deg,
+                rgba(255, 255, 255, var(--opacity1)) 0%,
+                rgba(255, 255, 255, var(--opacity2)) var(--stop1),
+                rgba(255, 255, 255, var(--opacity3)) var(--stop2),
+                rgba(255, 255, 255, 0.01) 100%);
         -webkit-mask-repeat: no-repeat;
         -webkit-mask-size: cover;
         z-index: 1;
